@@ -7,21 +7,27 @@
   },
   "scripts": {
     "build": "phat-fn build --experimentalAsync",
-    "test": "tsx tests/test.ts",
+    "test": "vitest",
     "set-secrets": "tsx scripts/setSecrets.ts",
     "lint": "tsc --noEmit",
     "publish-agent": "phat-fn build --experimentalAsync && tsx scripts/publish.ts"
   },
   "devDependencies": {
     "@phala/fn": "^0.2.22",
+    "@types/supertest": "^6.0.2",
     "blakejs": "^1.2.1",
     "crypto-js": "^4.2.0",
     "dotenv": "^16.4.5",
     "js-sha3": "^0.9.3",
+    "supertest": "^7.0.0",
     "thirdweb": "^5.32.3",
     "tsx": "^4.7.1",
     "typescript": "^5.3.3",
+    "vitest": "^2.1.6",
     "wyhash": "^1.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "hono": "^4.6.12",
+    "prettier": "^3.4.1"
+  }
 }
